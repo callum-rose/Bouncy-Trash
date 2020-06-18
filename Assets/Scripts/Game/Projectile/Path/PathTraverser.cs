@@ -8,6 +8,10 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile.Path
 
         public Vector2 CurrentPosition => Path.Evaluate(NormalisedTime);
         public float Progress => NormalisedTime;
+        /// <summary>
+        /// The time that this traverser went over it's duration
+        /// </summary>
+        public float CarryOverTime => _internalTime - _duration;
 
         private float NormalisedTime => _internalTime / _duration;
 

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34a46b80275ceb4eb1e207665fbfbcb, type: 3}
+  m_Name: TestStage
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: id
+      Entry: 2
+      Data: 8c7970135f5a4edf9e60c7e4ff832e48
+  name: TestStage
+  duration: 20
+  scheduler: {fileID: 3741480552640489895, guid: 3f152b79560e15c419729d874c129075,
+    type: 3}
+  movement: {fileID: 7597782981484178150, guid: fd2ff8e577b56d74388ab27e61134756,
+    type: 3}
+  kindSelector: {fileID: 8503591086914461005, guid: bab416194dfc77f43bae64ec0a7b29a3,
+    type: 3}

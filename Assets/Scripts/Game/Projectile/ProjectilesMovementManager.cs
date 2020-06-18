@@ -1,7 +1,9 @@
 ﻿using BalsamicBits.BouncyTrash.Game.Core;
+using BalsamicBits.BouncyTrash.Game.Debug;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
 namespace BalsamicBits.BouncyTrash.Game.Projectile
 {
@@ -9,7 +11,7 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
     {
         public event Action<ProjectileMover> ProjectileBounced;
         public event Action<ProjectileMover> ProjectileCompleted;
-        public event Action<ProjectileMover> ProjectileCrashed;
+        public event Action<ProjectileMover> ProjectileHitGround;
         public event Action<ProjectileMover> ProjectileOffScreen;
 
         public IHasPosition BouncerPosition { get; set; }
@@ -17,6 +19,9 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
 
         private readonly IList<ProjectileMover> _projectiles = new List<ProjectileMover>();
         private readonly Queue<ProjectileMover> _projectilesToRemove = new Queue<ProjectileMover>(1);
+
+        private float _debugLastReachPathEndTime = float.MinValue;
+        private ProjectileMover _debugLastProjectileMoverToReachPathEnd;
 
         #region Unity
 
@@ -58,8 +63,9 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
             {
                 // reached end
                 CompleteProjectile(projectileMover);
+                return;
             }
-            else if (BouncerPosition.CurrentPosition == projectilePosition)
+            else if (BouncerPosition.CurrentPosition == projectilePosition || DebugSettingsComponent.Instance.Settings.DoDisableCrashing)
             {
                 // bounced
                 BounceProjectile(projectileMover);
@@ -67,8 +73,23 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
             else
             {
                 // crashed
-                CrashProjectile(projectileMover);
+                GroundProjectile(projectileMover);
             }
+
+
+            if (GameTimings.Time - _debugLastReachPathEndTime < GameTimings.FrameDuration * 0.9f)
+            {
+                if (projectileMover.CurrentPosition != _debugLastProjectileMoverToReachPathEnd.CurrentPosition)
+                {
+                    LogUtil.WriteError($"2 projectiles bounced / crashed at position {projectileMover.CurrentPosition}" +
+                        $" & {_debugLastProjectileMoverToReachPathEnd.CurrentPosition} within a period of " +
+                        $"{GameTimings.Time - _debugLastReachPathEndTime}s. Period should be {GameTimings.FrameDuration}s");
+                    UnityEngine.Debug.Break();
+                }
+            }
+
+            _debugLastReachPathEndTime = GameTimings.Time;
+            _debugLastProjectileMoverToReachPathEnd = projectileMover;
         }
 
         private void OnReachedDeadZone(ProjectileMover projectileMover)
@@ -89,9 +110,9 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
             ProjectileCompleted.Invoke(projectileMover);
         }
 
-        private void CrashProjectile(ProjectileMover projectileMover)
+        private void GroundProjectile(ProjectileMover projectileMover)
         {
-            ProjectileCrashed.Invoke(projectileMover);
+            ProjectileHitGround.Invoke(projectileMover);
 
             projectileMover.ReachedPathEnd -= OnProjectileReachedEndOfPath;
 

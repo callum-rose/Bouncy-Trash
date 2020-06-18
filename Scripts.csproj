@@ -24,7 +24,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_3_6;UNITY_2019_3;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;x_INPUT_BINDINGS_USE_UNITY_EVENTS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_3_6;UNITY_2019_3;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;x_INPUT_BINDINGS_USE_UNITY_EVENTS;ODIN_INSPECTOR;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -62,48 +62,94 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Core\AssetLoader.cs" />
+    <Compile Include="Assets\Scripts\Core\BaseModelScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\Core\BaseSceneManager.cs" />
+    <Compile Include="Assets\Scripts\Core\EditorSceneNames.cs" />
+    <Compile Include="Assets\Scripts\Core\NameAndIdScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\Core\PassThroughData.cs" />
     <Compile Include="Assets\Scripts\Core\ResourcePaths.cs" />
+    <Compile Include="Assets\Scripts\Core\SceneField.cs" />
+    <Compile Include="Assets\Scripts\Game\Bouncer\Bouncer.cs" />
     <Compile Include="Assets\Scripts\Game\Bouncer\BouncerAnimator.cs" />
-    <Compile Include="Assets\Scripts\Game\Bouncer\BouncerManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Bouncer\DefaultBouncer.cs" />
+    <Compile Include="Assets\Scripts\Game\Bouncer\BouncerBuilder.cs" />
+    <Compile Include="Assets\Scripts\Game\Bouncer\BouncerData.cs" />
+    <Compile Include="Assets\Scripts\Game\Bouncer\BouncerFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Bouncer\BouncerLoader.cs" />
     <Compile Include="Assets\Scripts\Game\Bouncer\IBouncer.cs" />
-    <Compile Include="Assets\Scripts\Game\Bouncer\IBouncerAnimatable.cs" />
     <Compile Include="Assets\Scripts\Game\Bouncer\IBouncerMovementController.cs" />
     <Compile Include="Assets\Scripts\Game\Bouncer\KeyboardBouncerMovementController.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\BaseStageData.cs" />
     <Compile Include="Assets\Scripts\Game\Core\GameController.cs" />
     <Compile Include="Assets\Scripts\Game\Core\GameDimensions.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\GamePassThroughData.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\GameSceneManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\GameStartData.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\GameStartPassThroughData.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\GameStarter.cs" />
     <Compile Include="Assets\Scripts\Game\Core\GameStats.cs" />
     <Compile Include="Assets\Scripts\Game\Core\GameTimings.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\IAnimatable.cs" />
     <Compile Include="Assets\Scripts\Game\Core\IDestructable.cs" />
-    <Compile Include="Assets\Scripts\Game\Core\IGameStatsReadable.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\IGameStatsNotifier.cs" />
     <Compile Include="Assets\Scripts\Game\Core\IGameStatsUpdatable.cs" />
     <Compile Include="Assets\Scripts\Game\Core\IHasPosition.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\Offsetor.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\StandardStageData.cs" />
     <Compile Include="Assets\Scripts\Game\Debug\DebugPathDrawer.cs" />
     <Compile Include="Assets\Scripts\Game\Debug\DebugPositioner.cs" />
+    <Compile Include="Assets\Scripts\Game\Debug\DebugSettings.cs" />
+    <Compile Include="Assets\Scripts\Game\Debug\DebugSettingsComponent.cs" />
     <Compile Include="Assets\Scripts\Game\Debug\DebugStoreyVisualiser.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\Frame.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\FrameBuffer.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\CoinFactory.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\IProjectileFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\IProjectileKindSelector.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\IProjectileMovementHandler.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\IProjectileObjectLoader.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\IProjectileSchedule.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\IResettable.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\OffsetPath.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Path\BasicPath.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Path\FlatPath.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Path\HalfSplicedPath.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Path\IPath.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Path\IPathFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Path\OffsetPath.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Path\PathExtensions.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Path\PathTraverser.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileController.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileBuilder.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileData.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileDataLoader.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\ProjectileFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileKind.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileKindFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileKindSelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileManager.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\ProjectileMover.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileObjectLoader.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileSchedule.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\ProjectileThemeData.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile\ProjectilesMovementManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectile\WaitForGameTime.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\AscendingStoreySelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\DescendingStoreySelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\Frame.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\FrameBuffer.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\IProjectileSchedule.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\IProjectileScheduleContainer.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\IStoreySelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\ProjectileSchedule.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\RandomStoreySelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\SpawnEvent.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\Scheduler\WaitForGameTime.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\SpinAnimator.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile\TrashFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenery\SceneryData.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\CoinsDisplayer.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\GameUiPassThroughData.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\GameUiSceneManager.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\IIntDisplayer.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\IIntDisplayerContainer.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\LivesDisplayer.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\ScoreDisplayer.cs" />
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -302,17 +348,20 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Editor">
+      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+    </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zlib.CF">
-      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Assets/Plugins/Ionic.Zlib.CF.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/callu/Documents/GitHub/bouncy_trash_v2/Library/PackageCache/jillejr.newtonsoft.json-for-unity@12.0.301/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -672,6 +721,10 @@
     <ProjectReference Include="InputBinder.csproj">
       <Project>{6AC4F768-8097-3AEC-95B0-50FF79D8E087}</Project>
       <Name>InputBinder</Name>
+    </ProjectReference>
+    <ProjectReference Include="IUnified.csproj">
+      <Project>{F33CC41D-843F-4BA6-5A78-5601BCF5C64A}</Project>
+      <Name>IUnified</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,7 @@
-﻿using System;
+﻿using BalsamicBits.BouncyTrash.Game.Core;
+using System;
 
-namespace BalsamicBits.BouncyTrash
+namespace BalsamicBits.BouncyTrash.Game.Bouncer
 {
     public interface IBouncerMovementController : IDestructable
     {

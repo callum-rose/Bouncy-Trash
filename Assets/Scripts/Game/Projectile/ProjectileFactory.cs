@@ -1,12 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace BalsamicBits.BouncyTrash.Game.Projectile
 {
-    internal class ProjectileFactory : IProjectileFactory
+    internal abstract class ProjectileFactory : IProjectileFactory
     {
-        private List<Projectile> _projectilePrefabs;
+        protected abstract Func<ProjectileData, bool> Filter { get; set; }
+
+        private List<ProjectileData> _projectileDatas;
 
         private Transform _container;
 
@@ -16,7 +19,7 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
             {
                 _currentIndex++;
 
-                if (_currentIndex >= _projectilePrefabs.Count)
+                if (_currentIndex >= _projectileDatas.Count)
                 {
                     _currentIndex = 0;
                 }
@@ -27,14 +30,19 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
 
         private int _currentIndex;
         
-        public ProjectileFactory(Transform container)
+        public ProjectileFactory(Transform container, string dataPath)
         {
             _container = container;
 
-            IProjectileObjectLoader loader = new ProjectileObjectLoader();
+            ProjectileDataLoader loader = new ProjectileDataLoader(dataPath);
             var projectiles = loader.Load();
 
-            _projectilePrefabs = projectiles.ToList();
+            if (Filter != null)
+            {
+                projectiles = projectiles.Where(Filter);
+            }
+
+            _projectileDatas = projectiles.ToList();
 
             _currentIndex = NextIndex;
         }
@@ -42,7 +50,13 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
         public Projectile CreateInstance()
         {
             _currentIndex = NextIndex;
-            return Object.Instantiate(_projectilePrefabs[_currentIndex], _container);
+
+            ProjectileData data = _projectileDatas[_currentIndex];
+
+            Projectile projectile = ProjectileBuilder.Build(data);
+            projectile.transform.SetParent(_container);
+
+            return projectile;
         }
     }
 }

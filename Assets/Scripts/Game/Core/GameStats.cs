@@ -1,28 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
 namespace BalsamicBits.BouncyTrash.Game.Core
 {
-	internal class GameStats : IGameStatsReadable, IGameStatsUpdatable
+    internal class GameStats : IGameStatsNotifier, IGameStatsUpdatable
     {
-        public int Score { get; private set; }
-        public int Lives { get; private set; }
+        public event Action<int> LivesChanged;
+        public event Action<int> ScoreChanged;
+        public event Action<int> CoinsChanged;
 
-		#region API
+        private int _score;
+        private int _lives;
+        private int _coins;
+
+        #region API
 
         public void UpdateScore(int scoreDelta)
         {
-            Score += scoreDelta;
+            _score += scoreDelta;
 
-            UnityEngine.Debug.Log(Score);
+            ScoreChanged?.Invoke(_score);
         }
 
         public void UpdateLives(int livesDelta)
         {
-            Lives += livesDelta;
+            _lives += livesDelta;
 
-            UnityEngine.Debug.Log(Lives);
+            LivesChanged?.Invoke(_lives);
+        }
+        
+        public void UpdateCoins(int coinsDelta)
+        {
+            _coins += coinsDelta;
+
+            CoinsChanged?.Invoke(_coins);
         }
 
         #endregion

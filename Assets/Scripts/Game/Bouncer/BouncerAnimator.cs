@@ -3,13 +3,13 @@ using BalsamicBits.BouncyTrash.Game.Core;
 using DG.Tweening;
 using UnityEngine;
 
-namespace BalsamicBits.BouncyTrash
+namespace BalsamicBits.BouncyTrash.Game.Bouncer
 {
     public class BouncerAnimator : MonoBehaviour, IAnimatable
     {
         [SerializeField] private Transform target;
 
-        private float AnimationDuration => GameTimings.SmallestBounceDuration * 0.5f / GameTimings.TimeScale;
+        private float AnimationDuration => GameTimings.FrameDuration * 0.9f / GameTimings.TimeScale;
 
         private Vector3 _initialScale;
 
@@ -28,7 +28,7 @@ namespace BalsamicBits.BouncyTrash
                 return;
             }
 
-            target.DOPunchScale(_initialScale.SetY(0.5f), duration, 1);
+            target.DOPunchScale(new Vector3(0, -0.2f, 0), duration, 1);
 
             _lastAnimateTime = GameTimings.Time;
         }

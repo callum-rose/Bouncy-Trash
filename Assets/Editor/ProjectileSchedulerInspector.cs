@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
-using BalsamicBits.BouncyTrash.Game.Projectile;
 using BalsamicBits.BouncyTrash.Game.Core;
 using Utils;
-using System.Linq;
+using BalsamicBits.BouncyTrash.Game.Projectile.Scheduler;
 
 namespace BalsamicBits.BouncyTrash
 {
@@ -27,35 +24,31 @@ namespace BalsamicBits.BouncyTrash
 
             EditorGUILayout.Space(GameDimensions.StoreyCount * spacingPerStorey);
 
-            FrameBuffer buffer = (target as ProjectileSchedule).Buffer;
+            FrameBuffer[] buffers = (target as ProjectileSchedule).Buffers;
 
-            float frameWidth = EditorGUIUtility.currentViewWidth / buffer.Count;
+            float frameWidth = EditorGUIUtility.currentViewWidth / buffers[0].Count;
 
-            for (int i = 0; i < buffer.Count; i++)
+            for (int b = 0; b < buffers.Length; b++)
             {
-                Frame frame = buffer[i];
-                for (int s = 1; s <= GameDimensions.StoreyCount; s++)
+                FrameBuffer buffer = buffers[b];
+                for (int i = 0; i < buffer.Count; i++)
                 {
+                    Frame frame = buffer[i];
+
                     Color colour;
-                    if (!frame.Datas.Exists(d => d.DebugStorey == s))
+                    if (frame.Position == null)
                     {
                         // no bounce data here
                         colour = GUI.backgroundColor;
                     }
                     else
                     {
-                        if (!frame.Position.HasValue)
-                        {
-                            colour = GUI.backgroundColor;
-                        }
-                        else
-                        {
-                            Frame.Data data = frame.Datas.FirstOrDefault(d => d.DebugStorey == s);
-                            colour = GetColour(frame.Position.Value, data.DebugStorey);
-                        }
+                        colour = GetColour(frame.Position.Value, frame.DebugStorey.Value);
                     }
 
-                    EditorGUI.DrawRect(new Rect(i * frameWidth, (GameDimensions.StoreyCount - s) * spacingPerStorey, frameWidth, spacingPerStorey), colour);
+                    Rect tileRect = new Rect(i * frameWidth, (GameDimensions.StoreyCount - b - 1) * spacingPerStorey, frameWidth, spacingPerStorey);
+                    EditorGUI.DrawRect(tileRect, colour);
+                    EditorGUI.LabelField(tileRect, frame.Position?.ToString() ?? "", new GUIStyle { fontStyle = FontStyle.Bold });
                 }
             }
         }
@@ -80,6 +73,12 @@ namespace BalsamicBits.BouncyTrash
 
         private Color GetColour(int position, int storey)
         {
+            return new HSVColor((float)storey / GameDimensions.StoreyCount, 0.8f, (float)position / GameDimensions.StoreyCount).ToColor();
+        }
+
+        private Color GetInvColour(int position, int storey)
+        {
+            storey %= GameDimensions.StoreyCount;
             return new HSVColor(storey / 3f, 0.8f, position / 3f).ToColor();
         }
 

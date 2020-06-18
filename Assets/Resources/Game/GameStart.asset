@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150df205656874f45ad4af7989c9ae00, type: 3}
+  m_Name: GameStart
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  game:
+    sceneAsset: {fileID: 102900000, guid: 7d47368294da029479f12d281184d58f, type: 3}
+    logErrorIfNotInBuild: 1
+    buildIndex: 1
+  scenery:
+    sceneAsset: {fileID: 102900000, guid: 3b6432ccb4be7384da6c7d0f720272b6, type: 3}
+    logErrorIfNotInBuild: 1
+    buildIndex: 2
+  ui:
+    sceneAsset: {fileID: 102900000, guid: 6296f3e25e74b9f4a9f41a9c380f9a37, type: 3}
+    logErrorIfNotInBuild: 1
+    buildIndex: 0

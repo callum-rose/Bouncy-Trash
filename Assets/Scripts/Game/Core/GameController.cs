@@ -1,41 +1,39 @@
 ﻿using BalsamicBits.BouncyTrash.Game.Projectile;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace BalsamicBits.BouncyTrash.Game.Core
 {
-    internal class GameController : MonoBehaviour
-    {
-#pragma warning disable 0647
-        [SerializeField] private ProjectileController projectileController;
-        [SerializeField] private BouncerManager bouncerManager;
-        [SerializeField, Range(0, 1)] private float testTimeScale;
-#pragma warning restore 0647
+	internal class GameController : MonoBehaviour
+	{
+        private ProjectileManager _projectileManager;
+        private ProjectileKindFactory _projectileKindFactory;
 
-        private GameStats _gameStats = new GameStats();
+		#region Unity
 
-        #region Unity
 
-        private void Start()
+
+		#endregion	
+
+		#region API
+
+        public void SetStaticDependancies(ProjectileManager projectileManager, ProjectileKindFactory projectileFactory)
         {
-            projectileController.SetDependancies(bouncerManager.Position, bouncerManager.Animator, _gameStats as IGameStatsUpdatable);
+
         }
 
-        private void OnValidate()
+        public void Test()
         {
-            GameTimings.TimeScale = testTimeScale;
+
         }
 
-        #endregion
+		#endregion	
 
-        #region API
+		#region Methods
 
+        
 
-
-        #endregion
-
-        #region Events
-
-
-        #endregion
-    }
+		#endregion	
+	}
 }

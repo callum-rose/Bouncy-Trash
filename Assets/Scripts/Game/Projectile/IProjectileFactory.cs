@@ -1,6 +1,4 @@
-﻿using BalsamicBits.BouncyTrash.Game.Projectile;
-
-namespace BalsamicBits.BouncyTrash
+﻿namespace BalsamicBits.BouncyTrash.Game.Projectile
 {
     internal interface IProjectileFactory
     {

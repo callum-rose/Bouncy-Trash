@@ -1,7 +1,10 @@
-﻿namespace BalsamicBits.BouncyTrash
+﻿namespace BalsamicBits.BouncyTrash.Core
 {
-    internal static class ResourcePaths
+    public static class ResourcePaths
     {
         public const string Projectiles = "Projectiles";
+        public const string Bouncers = "Bouncers";
+        public const string Scenery = "Scenery";
+        public const string Game = "Game";
     }
 }

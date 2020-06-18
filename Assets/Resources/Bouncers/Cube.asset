@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4fc32414ccf4244ba633c3ec07a6e65, type: 3}
+  m_Name: Cube
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: id
+      Entry: 2
+      Data: f03584a64d2d4cde8ef4755e54073ccb
+  name: Cube
+  model: {fileID: 2030846388250869622, guid: 4b96021a71a0d69489b0e0820ed4dbf8, type: 3}
+  offset: {x: 0, y: 0.25, z: 0}
+  isTheDefaultBouncer: 1
+  description: Test
+  cost: 104

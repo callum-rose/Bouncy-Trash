@@ -68,7 +68,11 @@ namespace BalsamicBits.BouncyTrash.Game.Projectile
                 newPath = newPath.GetFollowOnFrom(previousPath);
             }
 
+            // get the time the last path was over by to add to the next
+            float carryOverTime = _pathTraverser?.CarryOverTime ?? 0f;
+
             _pathTraverser = new PathTraverser(newPath, GameTimings.GetProjectileDuration(_storey));
+            _pathTraverser.Advance(carryOverTime);
 
             // set position to start
             SetTransformPositionToTraverser();

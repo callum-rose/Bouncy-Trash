@@ -1,12 +1,10 @@
 ﻿using BalsamicBits.BouncyTrash.Game.Core;
 using BalsamicBits.BouncyTrash.Game.Projectile.Path;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BalsamicBits.BouncyTrash.Game.Debug
 {
-	internal class DebugPathDrawer : MonoBehaviour
+    internal class DebugPathDrawer : MonoBehaviour
 	{
 #pragma warning disable 0647
         [SerializeField] private int resolution = 30;
@@ -17,6 +15,10 @@ namespace BalsamicBits.BouncyTrash.Game.Debug
         private int _calculatedPathStorey;
 
         #region Unity
+
+        private void Awake()
+        {
+        }
 
         private void OnDrawGizmos()
         {

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4fc32414ccf4244ba633c3ec07a6e65, type: 3}
+  m_Name: Circle
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: type
+      Entry: 7
+      Data: 0|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: BalsamicBits.BouncyTrash.Game.Projectile.Scheduler.AscendingStoreySelector,
+        Scripts
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: id
+      Entry: 2
+      Data: 43081297e45241f88350d8c94c31e77d
+  name: Circle
+  model: {fileID: 2030846388250869622, guid: fffbfd9641701104a9234a3ede8f21e8, type: 3}
+  offset: {x: 0, y: 0.5, z: 0}
+  isTheDefaultBouncer: 0
+  description: Test
+  cost: 104

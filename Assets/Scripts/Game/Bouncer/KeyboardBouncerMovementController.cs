@@ -2,7 +2,7 @@
 using InputBinding;
 using UnityEngine;
 
-namespace BalsamicBits.BouncyTrash
+namespace BalsamicBits.BouncyTrash.Game.Bouncer
 {
     public class KeyboardBouncerMovementController : MonoBehaviour, IBouncerMovementController
     {
