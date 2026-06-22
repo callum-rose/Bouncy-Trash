@@ -1,6 +1,6 @@
 # Bouncy Trash
 
-![Demo Gameplay](Demo%20Gameplay.jpeg)
+![Demo Gameplay](Screenshots/Demo%20Gameplay.jpeg)
 
 A 2D arcade reflex game built in Unity. This repository is a vertical slice — a playable core loop used to prove out the architecture and the gameplay system (deterministic projectile scheduling).
 
